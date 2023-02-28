@@ -1,9 +1,11 @@
 //tasks 2
+//Napishite programmu, kotoraya na vkhod prinimayet dva chisla i vydayot, 
+//kakoye chislo bol'sheye, a kakoye men'sheye.
 
-Console.Write("Введи первое целое число numa :  "); 
+Console.Write("Vvedi pervoye tseloye chislo numa :  "); 
 int numa = int .Parse(Console.ReadLine());
 
-Console.Write("Введи второе целое число numb:  "); 
+Console.Write("Vvedi vtoroye tseloye chislo numb:  "); 
 int numb = int .Parse(Console.ReadLine());
 
 int max = 0;
@@ -11,10 +13,76 @@ int min = 0;
 if(numa > numb){
     
       max = numa;
-      Console.WriteLine($"{max} Больше");
+      Console.WriteLine($"{max} Bol'she");
 }
 if(numa < numb)
 {
       min = numa;
-      Console.WriteLine($"{min} Меньше");
+      Console.WriteLine($"{min} men'she ");
+}
+// tasks 4 
+// Napishite programmu, kotoraya prinimayet na vkhod tri chisla i vydayot 
+// maksimal'noye iz etikh chisel.
+int a,b,c;
+Console.Write("Vvedi pervoye tseloye chislo a :  "); 
+  a = int .Parse(Console.ReadLine());
+  Console.Write("Vvedi vtoroye tseloye chislo b:  "); 
+  b = int .Parse(Console.ReadLine());
+  Console.Write("Vvedi tret'ye tseloye chislo c:  "); 
+  c = int .Parse(Console.ReadLine());
+
+if (a >= b & a >= c )
+{
+    
+      Console.WriteLine($" Maksimal'noye znacheniye {a}");
+}
+if (b >= a & b >= c )
+{
+    
+      Console.WriteLine($"Maksimal'noye znacheniye {b}");
+}
+if (c >= a & c >= b )
+{
+    
+     Console.WriteLine($"Maksimal'noye znacheniye {c}");
+}
+
+// Tasks 6 
+//Napishite programmu, kotoraya na vkhod prinimayet chislo i vydayot, 
+//yavlyayetsya li chislo chotnym (delitsya li ono na dva bez ostatka)
+
+int number;
+Console.Write("Введи  целое число  :  "); 
+number = int.Parse(Console.ReadLine());
+
+if (number % 2 == 0){
+    Console.Write( $"число {number} чётное ");
+}
+else{
+    Console.Write(" Нет нечётное ");
+}
+
+// Tasks 8 Napishite programmu, kotoraya na vkhod prinimayet chislo (N), 
+//a na vykhode pokazyvayet vse chotnyye chisla ot 1 do N.
+
+Console.Write("Vvedite naturalnoe chislo: ");
+int N = int.Parse(Console.ReadLine());
+
+int count = 0;
+
+if (N < 0)
+{
+    while (count > N+1)
+   {
+    count -= 2;    
+    Console.Write($" {count}");
+   }
+}
+else
+{
+    while (count < N-1)
+   {
+    count += 2;    
+    Console.Write($" {count}");
+   }
 }
